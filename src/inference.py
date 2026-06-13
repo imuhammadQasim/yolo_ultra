@@ -28,7 +28,13 @@ import cv2
 
 model = YOLO("model/yolo26n.pt")
 
-img = cv2.imread('person.jpg')
+img = cv2.imread('bus.jpg')
+target_width = 1200 
+h, w = img.shape[:2]
+aspect_ratio = h / w
+target_height = int(target_width * aspect_ratio)
+img = cv2.resize(img, (target_width, target_height), interpolation=cv2.INTER_AREA)
+
 results = model(img) 
 print(results)
 for result in results:
