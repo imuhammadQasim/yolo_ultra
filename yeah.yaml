@@ -1,0 +1,29 @@
+# Practicing Yaml Syntax
+Product:
+  title: 'The way of learning Yaml'
+  price: 1.9
+  stock: true
+  categories:
+    - gadget
+    - electronics
+    - E-Book
+  dimensions: 
+    width: 200
+    height: 200
+    depth: 300
+  description: |
+    A description field that 
+    spans multiple line.
+
+server_config:
+  environments: [development, staging, production] # Flow style!
+  allowed_ports:
+    - 80
+    - 443
+    - 8080
+  users: # A list of objects
+    - username: 'Qasim'
+      role: 'developer'
+    - username: 'Admin'
+      role: 'admin'
+
